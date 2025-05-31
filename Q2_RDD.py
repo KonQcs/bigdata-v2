@@ -9,7 +9,7 @@ sc = SparkSession \
     .appName("Q2 RDD") \
     .getOrCreate() \
     .sparkContext
-username = "krkostas"
+username = "kkiousis"
 
 sc.setLogLevel("ERROR")
 job_id = sc.applicationId
