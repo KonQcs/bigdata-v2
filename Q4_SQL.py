@@ -7,7 +7,7 @@ spark = SparkSession \
     .appName("Q4 SQL") \
     .getOrCreate()
 sc = spark.sparkContext
-username = "krkostas"
+username = "kkiousis"
 
 sc.setLogLevel("ERROR")
 job_id = sc.applicationId
