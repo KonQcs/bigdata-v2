@@ -5,7 +5,7 @@ sc = SparkSession \
     .appName("Q1_RDD") \
     .getOrCreate() \
     .sparkContext
-username = "krkostas"
+username = "kkiousis"
 
 sc.setLogLevel("ERROR")
 job_id = sc.applicationId
@@ -31,7 +31,7 @@ def mesi_ora(arr):
 
 
 final_taxi = grouped_taxis.flatMapValues(mesi_ora).sortByKey()
-print("HourOfDay\tLongitude\tLatitude")
+print("HourOfDay-->\tLongitude-->\tLatitude-->")
 for hour, (log, lat) in final_taxi.collect():
     print(f"{hour}: {log}, {lat}")
 
